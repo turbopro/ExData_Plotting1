@@ -27,17 +27,17 @@ plot1.R -- R code to generate plot1.png
 
 plot1.png -- plot generated from 'plot1.R' code
 
-plot2.R -- R code to generate plot1.png
+plot2.R -- R code to generate plot2.png
 
-plot2.png -- plot generated from 'plot1.R' code
+plot2.png -- plot generated from 'plot2.R' code
 
-plot3.R -- R code to generate plot1.png
+plot3.R -- R code to generate plot3.png
 
-plot3.png -- plot generated from 'plot1.R' code
+plot3.png -- plot generated from 'plot3.R' code
 
-plot4.R -- R code to generate plot1.png
+plot4.R -- R code to generate plot4.png
 
-plot4.png -- plot generated from 'plot1.R' code
+plot4.png -- plot generated from 'plot4.R' code
 
 readSubsetFile.R -- R code to read in a subset of the data from the larger dataset.
                     Subset data taken for two days only: 01 Feb and 02 Feb, 2007.
