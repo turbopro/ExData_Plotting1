@@ -23,16 +23,16 @@ FILES:
 
 There are 10 files listed for this project:
 
-plot1.R -- R code to generate plot1.png
+plot1.R -- R code to generate plot1.png\n
 plot1.png -- plot generated from 'plot1.R' code
 
-plot2.R -- R code to generate plot1.png
+plot2.R -- R code to generate plot1.png\n
 plot2.png -- plot generated from 'plot1.R' code
 
-plot3.R -- R code to generate plot1.png
+plot3.R -- R code to generate plot1.png\n
 plot3.png -- plot generated from 'plot1.R' code
 
-plot4.R -- R code to generate plot1.png
+plot4.R -- R code to generate plot1.png\n
 plot4.png -- plot generated from 'plot1.R' code
 
 readSubsetFile.R -- R code to read in a subset of the data from the larger dataset.
