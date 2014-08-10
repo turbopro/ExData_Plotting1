@@ -4,7 +4,7 @@ readSubsetFile <- function(file) {
      # load in library 'sqldf'
      require(sqldf)
      
-     # firstly, check for file with dataset is in current working directory
+     # firstly, check that file with dataset is in current working directory
      # if file exists, continue processing, else, exit
      if(!file.exists(file)) {
           stop("Ensure dataset '", file, "' is in current working directory") 
