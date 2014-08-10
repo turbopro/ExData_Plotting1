@@ -2,7 +2,7 @@ plot1 <- function(file="household_power_consumption.txt") {
      # check for dataframe
      # if not exists, read in subset of the dataset required
      # store in dataframe 'tempDF' as global object
-     # else, print PLOT 1
+     # else, create PLOT 1 file in PNG format
      if(!exists("tempDF")) {
           # read in data using 'readSusbsetFile()'
           tempDF <<- readSubsetFile(file)
