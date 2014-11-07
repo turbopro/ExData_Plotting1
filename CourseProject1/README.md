@@ -1,9 +1,9 @@
 ## Introduction
 
-Text below is an amemded/rewrite of the original README>md from
+Text below is an amended/rewrite of the original README>md from
 cloned repo --> https://github.com/rdpeng/ExData_Plotting1
 
-"This assignment uses data from
+"This assignment uses data from 
 the <a href="http://archive.ics.uci.edu/ml/">UC Irvine Machine
 Learning Repository</a>, a popular repository for machine learning
 datasets. In particular, we will be using the "Individual household
@@ -24,18 +24,23 @@ FILES:
 There are 10 files listed for this project:
 
 plot1.R -- R code to generate plot1.png
+
 plot1.png -- plot generated from 'plot1.R' code
 
 plot2.R -- R code to generate plot1.png
+
 plot2.png -- plot generated from 'plot1.R' code
 
 plot3.R -- R code to generate plot1.png
+
 plot3.png -- plot generated from 'plot1.R' code
 
 plot4.R -- R code to generate plot1.png
+
 plot4.png -- plot generated from 'plot1.R' code
 
 readSubsetData.R -- R code to read in a subset of the data from the larger dataset.
+
                     Subset data taken for two days only: 01 Feb and 02 Feb, 2007.
 
 README.md -- this file
@@ -43,9 +48,9 @@ README.md -- this file
 
 EXECUTION:
 
-1.	Downloading the dataset to your PC
+1.	Download the dataset to your PC (use the above links provided)
 
-2.	To create the 'plotn.png' file, source the relevant 'plotn.R' file
+2.	Source the requisite 'plotn.R' 
 
-4.	Run the relevant function with the same name, 'plotn()'
+4.	Run the function with the same name, 'plotn()', to create the related 'plotn.png' file
 
