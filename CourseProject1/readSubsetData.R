@@ -8,7 +8,6 @@ readSubsetData <- function(file="./household_power_consumption.txt") {
      
      # firstly, check that file with dataset is in current working directory
      # if file does not exist, exit with error message
-     
      if(!file.exists(file)) {
           stop("Ensure dataset '", file, "' is in current working directory") 
      }
