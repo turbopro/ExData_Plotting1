@@ -1,23 +1,24 @@
-# uses sqldf to read in only rows needed from large data file
+# this file -- readSubsetData.R
+# function definition to read in required data from larger dataset
+# uses sqldf to read in subset of data
 
-readSubsetFile <- function(file) {
+readSubsetData <- function(file="./household_power_consumption.txt") {
      # load in library 'sqldf'
      require(sqldf)
      
-     # firstly, check for file with dataset is in current working directory
-     # if file exists, continue processing, else, exit
+     # firstly, check that file with dataset is in current working directory
+     # if file does not exist, exit with error message
      if(!file.exists(file)) {
           stop("Ensure dataset '", file, "' is in current working directory") 
      }
      
-     # open file to be read
+     # if file exists, open file for read
      tempFile <- file("./household_power_consumption.txt")
      
      # set attributes to allow for sqldf read
      attr(tempFile, "file.format") <- list(sep = ";", header = TRUE)
      
      # use sqldf to read in rows needed into dataframe 'tempDF'
-     # filter only Date
      tempDF <- sqldf("select * from tempFile where Date='1/2/2007' or Date='2/2/2007' ")
      
      # merge tempDF$Date and tempDF$Time into a single date element, DT, 
@@ -30,6 +31,6 @@ readSubsetFile <- function(file) {
      # close 'tempFile'
      close(tempFile)
      
-     # return dtaframe
+     # return dataframe
      return(tempDF)
 }
