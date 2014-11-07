@@ -40,8 +40,7 @@ plot4.R -- R code to generate plot1.png
 plot4.png -- plot generated from 'plot1.R' code
 
 readSubsetData.R -- R code to read in a subset of the data from the larger dataset.
-
-                    Subset data taken for two days only: 01 Feb and 02 Feb, 2007.
+Subset data taken for two days only: 01 Feb and 02 Feb, 2007.
 
 README.md -- this file
 
@@ -50,7 +49,11 @@ EXECUTION:
 
 1.	Download the dataset to your PC (use the above links provided)
 
-2.	Source the requisite 'plotn.R' 
+2.	Unzip the downloaded file to your current working directory
+
+3.	Download the 'plotn.R' files to your current working directory
+
+3.	Source the requisite 'plotn.R' 
 
 4.	Run the function with the same name, 'plotn()', to create the related 'plotn.png' file
 
