@@ -3,6 +3,13 @@
 # calls "readSubsetData()" to read in subset of data required
 
 plot4 <- function() {
+     # source "readSubsetData.R"
+     sourcefile <- "readSubsetData.R"
+     if(!file.exists(sourcefile)) {
+          stop("Ensure source file '", sourcefile, "' is in current working directory") 
+     }
+     source(sourcefile)
+     
      # check for dataframe
      # if not exists, call "readSubsetData()"
      if(!exists("tempDF")) {

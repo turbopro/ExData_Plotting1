@@ -3,7 +3,14 @@
 # calls "readSubsetData()" to read in subset of data required
 
 plot1 <- function() {
-     # check for dataframe
+     # source "readSubsetData.R"
+     sourcefile <- "readSubsetData.R"
+     if(!file.exists(sourcefile)) {
+          stop("Ensure source file '", sourcefile, "' is in current working directory") 
+     }
+     source(sourcefile)
+     
+     # check for subset dataframe
      # if not exists, call "readSubsetData()"
      if(!exists("tempDF")) {
           # read in data and store in 'tempDF' global object (no need to recompute)
