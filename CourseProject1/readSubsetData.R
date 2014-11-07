@@ -2,14 +2,14 @@
 # function definition to read in required data from larger dataset
 # uses sqldf to read in subset of data
 
-readSubsetData <- function(file="./household_power_consumption.txt") {
+readSubsetData <- function(readfile="household_power_consumption.txt") {
      # load in library 'sqldf'
      require(sqldf)
      
      # firstly, check that file with dataset is in current working directory
      # if file does not exist, exit with error message
-     if(!file.exists(file)) {
-          stop("Ensure dataset '", file, "' is in current working directory") 
+     if(!file.exists(readfile)) {
+          stop("Ensure dataset '", readfile, "' is in current working directory") 
      }
      
      # if file exists, open file for read
