@@ -35,7 +35,7 @@ plot3.png -- plot generated from 'plot1.R' code
 plot4.R -- R code to generate plot1.png
 plot4.png -- plot generated from 'plot1.R' code
 
-readSubsetFile.R -- R code to read in a subset of the data from the larger dataset.
+readSubsetData.R -- R code to read in a subset of the data from the larger dataset.
                     Subset data taken for two days only: 01 Feb and 02 Feb, 2007.
 
 README.md -- this file
@@ -45,9 +45,7 @@ EXECUTION:
 
 1.	Downloading the dataset to your PC
 
-2.	Extract the required subset of data and store into dataframe 'tempDF'
+2.	To create the 'plotn.png' file, source the relevant 'plotn.R' file
 
-3.	To create the 'plotn.png' file, source the relevant 'plotn.R' file
-
-4.	Run the relevant function with the same name, 'plotn.R()'
+4.	Run the relevant function with the same name, 'plotn()'
 
