@@ -1,8 +1,8 @@
 Introduction
 ------------
 
-Text below is an amended/rewrite of the original README>md from
-cloned repo --> https://github.com/rdpeng/ExData_Plotting1
+The excerpt below is taken from the original README.md from
+the repo --> https://github.com/rdpeng/ExData_Plotting1
 
 "This assignment uses data from 
 the <a href="http://archive.ics.uci.edu/ml/">UC Irvine Machine
