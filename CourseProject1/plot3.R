@@ -28,7 +28,7 @@ plot3 <- function() {
      plot(tempDF$DT, tempDF$Sub_metering_1, type="l", ylim=yrange, xlab="", ylab="Energy sub metering")
      lines(tempDF$DT, tempDF$Sub_metering_2, type="l", col="RED")
      lines(tempDF$DT, tempDF$Sub_metering_3, type="l", col="BLUE")
-     legend(x="topright", legend=c("Submetering_1", "Submetering_2", "Submetering_3"), 
+     legend(x="topright", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
             col=c("black", "red", "blue"), lty=1, seg.len=1, xjust=0, cex=0.85, x.intersp=0.5)
           
      # close png device
