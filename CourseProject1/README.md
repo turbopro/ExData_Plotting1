@@ -67,3 +67,7 @@ There are 10 files listed for this project:
 * The retrieval of the subset of data from the large dataset is done in a separate function, "readSubsetData()", from the relevant "plotn()" functions.  This allows both function sets to be designed to do only what they need to do: the "plotn()" functions plot, while the "readSubsetData()" function reads in the data subset. 
 
 * The "readSubsetData()" function will retrieve the required subset of the data, store this data as a dataframe, and place it into the global environment.  All "plotn()" functions will check for this dataframe, and if it is not present, a call to the "readSubsetData()" function is made to retrieve the subset of the data.  If the dataframe is present, the "plotn()" functions proceed to plot the respective data.  Effectively, the dataframe is cached; no call to the "readSubsetData()" function is made if the dataframe is present in the global environment.
+
+#####Addendum:
+
+* This document on the base plotting system may be of interest --> http://www.stat.berkeley.edu/~statcur/WorkshopBC/Presentations/Graphics/graphics.pdf
