@@ -23,37 +23,60 @@ FILES:
 
 There are 10 files listed for this project:
 
-plot1.R -- R code to generate plot1.png
+1	plot1.R			_ R code to generate plot1.png
 
-plot1.png -- plot generated from 'plot1.R' code
+2	plot1.png    		_ plot generated from 'plot1.R' code
 
-plot2.R -- R code to generate plot1.png
+3	plot2.R			_ R code to generate plot1.png
 
-plot2.png -- plot generated from 'plot1.R' code
+4	plot2.png			_ plot generated from 'plot1.R' code
 
-plot3.R -- R code to generate plot1.png
+5	plot3.R			_ R code to generate plot1.png
 
-plot3.png -- plot generated from 'plot1.R' code
+6	plot3.png			_ plot generated from 'plot1.R' code
 
-plot4.R -- R code to generate plot1.png
+7	plot4.R			_ R code to generate plot1.png
 
-plot4.png -- plot generated from 'plot1.R' code
+8	plot4.png			_ plot generated from 'plot1.R' code
 
-readSubsetData.R -- R code to read in a subset of the data from the larger dataset.
-Subset data taken for two days only: 01 Feb and 02 Feb, 2007.
+9	readSubsetData.R	_ R code to read in a subset of the data from the larger dataset
 
-README.md -- this file
+10	README.md			_ this file
 
 
 EXECUTION:
 
-1.	Download the dataset to your PC (use the above links provided)
+1	Download the dataset to your PC (use the above links provided)
 
-2.	Unzip the downloaded file to your current working directory
+2	Unzip the downloaded file to your current working directory
 
-3.	Download the 'plotn.R' files to your current working directory
+3	Download the 'plotn.R' files to your current working directory
 
-3.	Source the requisite 'plotn.R' 
+4	Source the requisite 'plotn.R' 
 
-4.	Run the function with the same name, 'plotn()', to create the related 'plotn.png' file
+5	Run the function with the same name, 'plotn()', to create the related 'plotn.png' file
 
+
+NOTES:
+
+1	The following R packages are required (all available from CRAN repos):
+
+	sqldf	gsubfn	proto	RSQLite	RSQLite.extfuns	DBI	tcltk
+
+2	The retrieval of the subset from the large dataset is done in a separate function,
+
+	"readSubsetData()", from the relevant "plotn()" functions.  This allows both function sets to
+
+	be designed to do only what they need to do: the "plotn()" function plots; while the
+
+	"readSubsetData()" function reads in the data subset. 
+
+3	All plot functions will check for a "cached" dataframe in the global environment.  This dataframe
+
+	will be generated whenever the "readSubsetData()" function is called.  Once called, the 
+
+	"readSubsetData()" function will place the subset data, stored in the dataframe, into the global
+
+	environment.  If the dataframe is already in the global environment, then the plot function will not
+
+	call the "readSubsetData()" function.  Effectively, in some respects, the dataframe is cached.

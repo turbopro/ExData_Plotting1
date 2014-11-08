@@ -13,7 +13,8 @@ plot2 <- function() {
      # check for dataframe
      # if not exists, call "readSubsetData()"
      if(!exists("tempDF")) {
-          # read in data and store in 'tempDF' global object (no need to recompute)
+          # read in and store data in 'tempDF' global object
+          # 'tempDF' serves as a cache: no need to recompute
           tempDF <<- readSubsetData()
      }
      

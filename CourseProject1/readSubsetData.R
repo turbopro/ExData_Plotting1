@@ -3,17 +3,17 @@
 # uses sqldf to read in subset of data
 
 readSubsetData <- function(readfile="household_power_consumption.txt") {
-     # load in library 'sqldf'
+     # load library 'sqldf'
      require(sqldf)
      
-     # firstly, check that file with dataset is in current working directory
-     # if file does not exist, exit with error message
+     # firstly, check that "readfile" is in current working directory
+     # if "readfile" does not exist, exit with error message
      if(!file.exists(readfile)) {
           stop("Ensure dataset '", readfile, "' is in current working directory") 
      }
      
-     # if file exists, open file for read
-     tempFile <- file("./household_power_consumption.txt")
+     # if "readfile" is in current working directory, open for read
+     tempFile <- file("household_power_consumption.txt")
      
      # set attributes to allow for sqldf read
      attr(tempFile, "file.format") <- list(sep = ";", header = TRUE)
