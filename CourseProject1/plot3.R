@@ -10,7 +10,7 @@ plot3 <- function() {
      }
      source(sourcefile)
      
-     # check for dataframe
+     # check for subset dataframe
      # if not exists, call "readSubsetData()"
      if(!exists("tempDF")) {
           # read in and store data in 'tempDF' global object

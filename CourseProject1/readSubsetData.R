@@ -1,9 +1,9 @@
 # this file -- readSubsetData.R
 # function definition to read in required data from larger dataset
-# uses sqldf to read in subset of data
+# uses "read.scv.sql()" to read in subset of data
 
 readSubsetData <- function(readfile="household_power_consumption.txt") {
-     # load library 'sqldf'
+     # load library 'sqldf' -- needed for read.csv.sql
      require(sqldf)
      
      # firstly, check that "readfile" is in current working directory
@@ -12,24 +12,16 @@ readSubsetData <- function(readfile="household_power_consumption.txt") {
           stop("Ensure dataset '", readfile, "' is in current working directory") 
      }
      
-     # if "readfile" is in current working directory, open for read
-     tempFile <- file("household_power_consumption.txt")
+     # "readfile" exists: use "read.csv.sql()" to read in rows needed into dataframe 'tempDF'
+     tempDF <- read.csv.sql(readfile, header = TRUE, sep = ";", dbname = tempfile(),
+                            sql = "select * from file where Date='1/2/2007' or Date='2/2/2007' ")
      
-     # set attributes to allow for sqldf read
-     attr(tempFile, "file.format") <- list(sep = ";", header = TRUE)
-     
-     # use sqldf to read in rows needed into dataframe 'tempDF'
-     tempDF <- sqldf("select * from tempFile where Date='1/2/2007' or Date='2/2/2007' ")
-     
-     # merge tempDF$Date and tempDF$Time into a single date element, DT, 
-     # and add DT as a new column to tempDF
+     # merge tempDF$Date and tempDF$Time into a single date element, DT 
+     # then add DT as a new column to tempDF
      tempDF <- within(tempDF, DT <- paste(Date, Time, sep=" "))
      
      # convert tempDF$DT to POSIXlt date
      tempDF$DT <- strptime(tempDF$DT, format = "%d/%m/%Y %H:%M:%S", tz = "Europe/Paris")
-     
-     # close 'tempFile'
-     close(tempFile)
      
      # return dataframe
      return(tempDF)
