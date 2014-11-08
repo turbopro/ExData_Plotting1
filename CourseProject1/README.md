@@ -1,4 +1,5 @@
-## Introduction
+Introduction
+------------
 
 Text below is an amended/rewrite of the original README>md from
 cloned repo --> https://github.com/rdpeng/ExData_Plotting1
@@ -19,64 +20,50 @@ one household with a one-minute sampling rate over a period of almost
 are available."
 
 
-FILES:
+####FILES:
 
 There are 10 files listed for this project:
 
-1	plot1.R			_ R code to generate plot1.png
+   - plot1.R	_ R code to generate plot1.png
 
-2	plot1.png    		_ plot generated from 'plot1.R' code
+   - plot1.png _ plot generated from 'plot1.R' code
 
-3	plot2.R			_ R code to generate plot1.png
+   - plot2.R	_ R code to generate plot1.png
 
-4	plot2.png			_ plot generated from 'plot1.R' code
+   - plot2.png _ plot generated from 'plot1.R' code
 
-5	plot3.R			_ R code to generate plot1.png
+   - plot3.R	_ R code to generate plot1.png
 
-6	plot3.png			_ plot generated from 'plot1.R' code
+   - plot3.png _ plot generated from 'plot1.R' code
 
-7	plot4.R			_ R code to generate plot1.png
+   - plot4.R	_ R code to generate plot1.png
 
-8	plot4.png			_ plot generated from 'plot1.R' code
+   - plot4.png _ plot generated from 'plot1.R' code
 
-9	readSubsetData.R	_ R code to read in a subset of the data from the larger dataset
+   - readSubsetData.R _ R code to read in a subset of the data from the larger dataset
 
-10	README.md			_ this file
+   - README.md _ this file
+
+  
+####EXECUTION:
+
+1.	Download the dataset to your PC (use the above links provided)
+
+2.	Unzip the downloaded file to your current working directory
+
+3.	Download the 'plotn.R' files to your current working directory
+
+4.	Source the requisite 'plotn.R' 
+
+5.	Run the function with the same name, 'plotn()', to create the related 'plotn.png' file
 
 
-EXECUTION:
+####NOTES:
 
-1	Download the dataset to your PC (use the above links provided)
-
-2	Unzip the downloaded file to your current working directory
-
-3	Download the 'plotn.R' files to your current working directory
-
-4	Source the requisite 'plotn.R' 
-
-5	Run the function with the same name, 'plotn()', to create the related 'plotn.png' file
-
-
-NOTES:
-
-1	The following R packages are required (all available from CRAN repos):
+* 1	The following R packages are required (all available from CRAN repos):
 
 	sqldf	gsubfn	proto	RSQLite	RSQLite.extfuns	DBI	tcltk
 
-2	The retrieval of the subset from the large dataset is done in a separate function,
+* 2	The retrieval of the subset from the large dataset is done in a separate function, "readSubsetData()", from the relevant "plotn()" functions.  This allows both function sets to be designed to do only what they need to do: the "plotn()" function plots; while the "readSubsetData()" function reads in the data subset. 
 
-	"readSubsetData()", from the relevant "plotn()" functions.  This allows both function sets to
-
-	be designed to do only what they need to do: the "plotn()" function plots; while the
-
-	"readSubsetData()" function reads in the data subset. 
-
-3	All plot functions will check for a "cached" dataframe in the global environment.  This dataframe
-
-	will be generated whenever the "readSubsetData()" function is called.  Once called, the 
-
-	"readSubsetData()" function will place the subset data, stored in the dataframe, into the global
-
-	environment.  If the dataframe is already in the global environment, then the plot function will not
-
-	call the "readSubsetData()" function.  Effectively, in some respects, the dataframe is cached.
+* 3	All plot functions will check for a "cached" dataframe in the global environment.  This dataframe will be generated whenever the "readSubsetData()" function is called.  Once called, the "readSubsetData()" function will place the subset data, stored in the dataframe, into the global environment.  If the dataframe is already in the global environment, then the plot function will not call the "readSubsetData()" function.  Effectively, in some respects, the dataframe is cached.
