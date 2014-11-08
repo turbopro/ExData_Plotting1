@@ -1,8 +1,8 @@
 Introduction
 ------------
+This is Project 1 of the Exploratory Data Analysis course. For this project we will develop the R code to retrieve a subset of data from a larger data set.  With this subset data, and making use of the base plotting system of R, we then generate various plots of the data.
 
-The excerpt below is taken from the original README.md from
-the repo --> https://github.com/rdpeng/ExData_Plotting1
+The excerpt below is taken from the README.md from the original repo --> https://github.com/rdpeng/ExData_Plotting1
 
 "This assignment uses data from 
 the <a href="http://archive.ics.uci.edu/ml/">UC Irvine Machine
@@ -60,7 +60,7 @@ There are 10 files listed for this project:
 
 ####NOTES:
 
-* The following R packages are required (all available from CRAN repos):
+* The following R packages are required (all available from the CRAN repos):
 
 	sqldf	gsubfn	proto	RSQLite	RSQLite.extfuns	DBI	tcltk
 
