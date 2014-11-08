@@ -17,7 +17,7 @@ The excerpt below is taken from the README.md from the original repo --> https:/
 >* <b>Description</b>: Measurements of electric power consumption in
 >one household with a one-minute sampling rate over a period of almost
 >4 years. Different electrical quantities and some sub-metering values
->are available."
+>are available.
 
 
 ####FILES:
