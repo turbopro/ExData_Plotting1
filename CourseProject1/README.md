@@ -51,11 +51,11 @@ There are 10 files listed for this project:
 
 2.	Unzip the downloaded file to your current working directory
 
-3.	Download the 'plotn.R' files to your current working directory
+3.	Download the 'plotN.R' and 'readSubsetData.R' files to your current working directory
 
-4.	Source the requisite 'plotn.R' 
+4.	Source the requisite 'plotN.R' 
 
-5.	Run the function with the same name, 'plotn()', to create the related 'plotn.png' file
+5.	Run the function with the same name, 'plotN()', to create the related 'plotN.png' file
 
 
 ####NOTES:
@@ -64,9 +64,9 @@ There are 10 files listed for this project:
 
 	sqldf	gsubfn	proto	RSQLite	RSQLite.extfuns	DBI	tcltk
 
-* The retrieval of the subset of data from the large dataset is done in a separate function, "readSubsetData()", from the relevant "plotn()" functions.  This allows both function sets to be designed to do only what they need to do: the "plotn()" functions plot, while the "readSubsetData()" function reads in the data subset. 
+* The retrieval of the subset of data from the large dataset is done in a separate function, 'readSubsetData()', from the relevant 'plotN()' functions.  This allows the functions to be designed to do only what they need to do: the 'plotN()' functions create the plots; while the 'readSubsetData()' function is designed to read in and return the subset of the data.
 
-* The "readSubsetData()" function will retrieve the required subset of the data, store this data as a dataframe, and place it into the global environment.  All "plotn()" functions will check for this dataframe, and if it is not present, a call to the "readSubsetData()" function is made to retrieve the subset of the data.  If the dataframe is present, the "plotn()" functions proceed to plot the respective data.  Effectively, the dataframe is cached; no call to the "readSubsetData()" function is made if the dataframe is present in the global environment.
+* When called, each 'plotN()' function will check firstly for the presence of a dataframe with the subset of the data required; if not present, a call to the 'readSubsetData()' function is made.  The 'readSubsetData()' will retrieve the required subset of the data and return this data as a dataframe to the calling 'plotN()' function. The 'plotN()' function then stores the returned dataframe with the subset of the data as a global object, from where this global object effectively becomes a cached resource.  Further calls to 'plotN()' functions will check for this 'cached' dataframe, and if it is present, the 'plotN()' functions use the dataframe to create the respective plots.  Effectively, the dataframe with the subset of the data, stored as a global object, is cached: no call to the "readSubsetData()" function is required/made if the dataframe is present in the global environment.
 
 #####Addendum:
 
